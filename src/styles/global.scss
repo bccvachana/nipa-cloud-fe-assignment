@@ -1,0 +1,47 @@
+@import 'styles/_var';
+
+html {
+  height: 100%;
+  background-color: #f9f9fb;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.625;
+  color: $color-text;
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  button {
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+body {
+  min-height: 100%;
+}
+
+#root {
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}

@@ -1,0 +1,42 @@
+@import 'styles/_var.scss';
+
+.body {
+  @include childrenNotLastChild {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.box {
+  padding: 1.5rem;
+  background-color: $color-white;
+  border-radius: $commonBorderRadius;
+}
+
+.inputBox {
+  @include flex;
+  @include children {
+    align-self: stretch;
+  }
+  @include childrenNotLastChild {
+    margin-right: 1.5rem;
+  }
+
+  > *:first-child {
+    flex-grow: 1;
+  }
+
+  .option {
+    flex-shrink: 0;
+  }
+}
+
+.resultBox {
+  font-weight: bold;
+}

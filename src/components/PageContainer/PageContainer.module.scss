@@ -1,0 +1,16 @@
+@import 'styles/_var';
+
+$pageHorizontalPadding: 1.5rem;
+
+.container {
+  width: 100%;
+  min-width: 700px;
+  padding: 0 $pageHorizontalPadding;
+  @include flex(column);
+}
+
+.body {
+  width: 100%;
+  flex-grow: 1;
+  max-width: $pageMaxWidth;
+}

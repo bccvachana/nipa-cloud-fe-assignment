@@ -1,0 +1,106 @@
+@import 'styles/_var';
+
+.container {
+  overflow-y: auto;
+
+  @include childrenNotLastChild {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.inputMode {
+  @include flex($justify: flex-start);
+  @include childrenNotLastChild {
+    margin-right: 1rem;
+  }
+
+  .mode,
+  .mode:focus {
+    width: calc(100% - 1.5rem);
+    height: 2rem;
+    background-color: inherit;
+    border: 2px solid $color-text;
+    border-radius: 2rem;
+    font-weight: bold;
+    @include flex;
+  }
+
+  .mode:hover {
+    border-color: #bd5364;
+    color: #bd5364;
+  }
+
+  .active,
+  .active:focus,
+  .active:hover {
+    background-image: $color-gradient;
+    border: none;
+    color: $color-white;
+  }
+}
+
+.inputConfidenceThreshold {
+  @include flex;
+
+  .range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #f1f0ef;
+    outline: none;
+    flex-grow: 1;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-image: $color-gradient;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background-image: $color-gradient;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .value {
+    width: 32px;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+.inputSwitch {
+  @include flex($justify: flex-start);
+  @include childrenNotLastChild {
+    width: 177px;
+    margin-right: 1rem;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 2.5rem;
+  font-weight: bold;
+  background: $color-gradient;
+  color: $color-white;
+  border-radius: 2.5rem;
+
+  &:hover {
+    background: #bd5364;
+  }
+}

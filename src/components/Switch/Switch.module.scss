@@ -1,0 +1,26 @@
+@import 'styles/_var';
+
+$height: 1.8rem;
+$border: 4px;
+$bodySize: calc(#{$height} - #{$border * 2});
+
+.container {
+  width: calc((#{$bodySize} * 2) + #{$border * 2});
+  height: $height;
+  padding: $border;
+  background-color: #f1f0ef;
+  border-radius: $height;
+  cursor: pointer;
+  @include flex;
+}
+
+.active {
+  background: $color-gradient;
+}
+
+.body {
+  width: $bodySize;
+  height: $bodySize;
+  background-color: $color-white;
+  border-radius: $height;
+}
